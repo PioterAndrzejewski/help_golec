@@ -23,14 +23,14 @@ const FAILURE_PICTURE = prerender(Settings.screenWidth, Settings.screenHeight, c
     canvas.fillStyle = FAILURE_BACK
     canvas.fillRect(0, 0, Settings.screenWidth, Settings.screenHeight)
 
-    walloftext(canvas, '404 Not Found')
+    walloftext(canvas, 'PAPA GODNOŚĆ')
 })
 
 const FAILURE_MOVED_PICTURE = prerender(Settings.screenWidth, Settings.screenHeight, canvas => {
     canvas.fillStyle = FAILURE_BACK
     canvas.fillRect(0, 0, Settings.screenWidth, Settings.screenHeight)
 
-    walloftext(canvas, '301 Moved')
+    walloftext(canvas, 'PAPA PERSPEKTYWY')
 })
 
 const WALL_PICTURE = prerender(Settings.screenWidth, Settings.screenHeight, canvas => {
@@ -54,8 +54,8 @@ function paintBackground(canvas: CanvasRenderingContext2D, t: number, level: Lev
         canvas.textBaseline = 'top'
         canvas.fillStyle = '#f1f1f1'
 
-        canvas.fillText('1. Pull', level.startingPoint.x, level.startingPoint.y + 48)
-        canvas.fillText('2. Release', level.startingPoint.x - Settings.targetReleaseDist,
+        canvas.fillText('1. Ciągnij', level.startingPoint.x, level.startingPoint.y + 48)
+        canvas.fillText('2. Puść', level.startingPoint.x - Settings.targetReleaseDist,
             level.startingPoint.y + 48)
     }
     else if (level.constructor === End) {
@@ -64,12 +64,12 @@ function paintBackground(canvas: CanvasRenderingContext2D, t: number, level: Lev
         canvas.textBaseline = 'middle'
         canvas.fillStyle = '#f1f1f1'
 
-        canvas.fillText('Written by Mark Vasilkov for js13kGames in 2020', Settings.screenWidth * 0.5, Settings.screenHeight - 24)
+        canvas.fillText('Golec, stolec, pierdolec, kondomomolec, wigilia 2023', Settings.screenWidth * 0.5, Settings.screenHeight - 24)
 
         canvas.font = systemFontHeading
         canvas.fillStyle = EARTH_BACK
 
-        canvas.fillText('Thank you for playing!', Settings.screenWidth * 0.5, Settings.screenHeight * 0.25)
+        canvas.fillText('Udało się zdobyć godność dla Golec!', Settings.screenWidth * 0.5, Settings.screenHeight * 0.25)
     }
 }
 

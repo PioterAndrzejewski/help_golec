@@ -62,6 +62,8 @@ const CHROME_BLUE = [
     [14, 13, 0.44, 0.01],
     [15, 14, 0.44, 0.01],
 ]
+const jonak = new Image();
+jonak.src = 'https://scontent-waw1-1.xx.fbcdn.net/v/t1.15752-9/370628986_1046976443114784_3099792772355061102_n.png?_nc_cat=109&ccb=1-7&_nc_sid=8cd0a2&_nc_ohc=3K6VTg9ofuEAX9uor8R&_nc_ht=scontent-waw1-1.xx&oh=03_AdTRQtb50vdOUs1gm7Ip8a6HZskNIbyHHyzPoY4xelX4UQ&oe=6595C20B'
 
 class BigBrother extends UserAgent {
     paint(canvas: CanvasRenderingContext2D, t: number) {
@@ -69,28 +71,18 @@ class BigBrother extends UserAgent {
 
         this.tracePath(canvas, CHROME_YELLOW)
 
-        canvas.fillStyle = '#ffcd40'
-        canvas.fill()
-
         this.tracePath(canvas, CHROME_GREEN)
-
-        canvas.fillStyle = '#0f9d58'
-        canvas.fill()
 
         this.tracePath(canvas, CHROME_RED)
 
-        canvas.fillStyle = '#db4437'
-        canvas.fill()
-
-        this.tracePath(canvas, CHROME_BLUE)
-
-        canvas.fillStyle = '#4285f4'
-        canvas.fill()
-
-        canvas.lineWidth = 2.5
-        canvas.strokeStyle = '#f1f1f1'
-        canvas.stroke()
-
         canvas.lineWidth = 1 // restore
+
+        const imageX = this.center.x - this.halfExtents.x;
+        const imageY = this.center.y - this.halfExtents.y - 10;
+        const imageWidth = this.halfExtents.x * 2;
+        const imageHeight = this.halfExtents.y * 2.6;
+
+
+        canvas.drawImage(jonak, imageX, imageY, imageWidth, imageHeight);
     }
 }

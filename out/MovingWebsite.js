@@ -52,6 +52,11 @@ class MovingWebsite extends Website {
         }
         canvas.fillStyle = '#f1f1f1';
         canvas.fillRect(x, y, width, height);
-        canvas.drawImage(WEBSITE_PICTURE, x + (width - 88 /* Settings.websitePicWidth */) * 0.5, y + (height - 64 /* Settings.websitePicHeight */) * 0.5, 88 /* Settings.websitePicWidth */, 64 /* Settings.websitePicHeight */);
+        const text = 'OSZCZĘDNOŚCI';
+        const textX = this.x + 60; // Adjust the X position as needed
+        const textY = this.y + 50; // Adjust the Y position as needed
+        canvas.fillStyle = 'black'; // Set the text color
+        canvas.font = '14px Arial'; // Set the font style
+        canvas.fillText(text, textX, textY);
     }
 }

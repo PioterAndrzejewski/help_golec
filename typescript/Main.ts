@@ -14,6 +14,7 @@ const Levels = [
     End,
 ]
 
+
 let activeLevel: Level
 let nextLevel: Level
 

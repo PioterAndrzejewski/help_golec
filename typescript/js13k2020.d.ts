@@ -13,6 +13,7 @@
 /// <reference path="BigBrother.ts" />
 /// <reference path="Wall.ts" />
 /// <reference path="Box.ts" />
+/// <reference path="Moon.ts" />
 /// <reference path="WebsiteBox.ts" />
 /// <reference path="Website.ts" />
 /// <reference path="MovingWebsite.ts" />

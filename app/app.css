@@ -35,3 +35,28 @@ body {
     transform: scale3d(1, 1, 1);
     width: 960px;
 }
+
+#text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  z-index: 99999;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.banner {
+  font-size: 32px;
+}
+
+.click-here {
+  margin-top: 12px;
+  font-size: 24px;
+}

@@ -43,7 +43,15 @@ class WebsiteBox extends NBody {
         canvas.save();
         canvas.translate(0.25 * xx, 0.25 * yy);
         canvas.rotate(0.5 * (Math.atan2(register0.y, register0.x) + Math.atan2(register1.y, register1.x)));
-        canvas.drawImage(WEBSITE_PICTURE, -0.5 * 88 /* Settings.websitePicWidth */, -0.5 * 64 /* Settings.websitePicHeight */, 88 /* Settings.websitePicWidth */, 64 /* Settings.websitePicHeight */);
+        // canvas.drawImage(WEBSITE_PICTURE,
+        //     -0.5 * Settings.websitePicWidth,
+        //     -0.5 * Settings.websitePicHeight,
+        //     Settings.websitePicWidth, Settings.websitePicHeight)
+        const text = 'księżyc';
+        canvas.fillStyle = 'black'; // Set the text color
+        canvas.font = '14px Arial'; // Set the font style
+        // Draw the text on the canvas
+        canvas.fillText(text, -0.5 * canvas.measureText(text).width, 0); // Center the text
         canvas.restore();
     }
 }

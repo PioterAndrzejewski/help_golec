@@ -52,14 +52,22 @@ INTERNET_EXPLORER_BACK.addColorStop(1 - 1, '#0d79c8');
 // INTERNET_EXPLORER_BACK.addColorStop(1 - 0.4357, '#7ddff9')
 INTERNET_EXPLORER_BACK.addColorStop(1 - 0.2624, '#86e8fd');
 INTERNET_EXPLORER_BACK.addColorStop(1 - 0, '#89eafe');
+const theimage = new Image();
+theimage.src = "https://scontent-waw1-1.xx.fbcdn.net/v/t1.15752-9/385533508_258865453538004_9066029919447688264_n.png?_nc_cat=100&ccb=1-7&_nc_sid=8cd0a2&_nc_ohc=ymJhP41h1EIAX864e9f&_nc_oc=AQn5Mb9PpW2cpBsDZ0rRTTWb7CaI6MHvXN-CM2tgspi1qWhS5UzshXj18pgd7lk9AI8&_nc_ht=scontent-waw1-1.xx&oh=03_AdTkKPeiVGLI1mElg9O3l-CuTEYKyszbcn-Q-PP96bmWHA&oe=65959A0E";
 class InternetExplorer extends UserAgent {
     paint(canvas, t) {
         this.interpolate(t);
         this.tracePath(canvas, INTERNET_EXPLORER);
-        canvas.save();
-        enclose(this.center.x - this.halfExtents.x, this.center.y - this.halfExtents.y, this.center.x + this.halfExtents.x, this.center.y + this.halfExtents.y);
-        canvas.fillStyle = INTERNET_EXPLORER_BACK; // '#0078d7'
-        canvas.fill();
+        // canvas.save()
+        // enclose(this.center.x - this.halfExtents.x, this.center.y - this.halfExtents.y,
+        //     this.center.x + this.halfExtents.x, this.center.y + this.halfExtents.y)
+        // canvas.fillStyle = INTERNET_EXPLORER_BACK // '#0078d7'
+        // canvas.fill()
+        const imageX = this.center.x - this.halfExtents.x;
+        const imageY = this.center.y - this.halfExtents.y - 10;
+        const imageWidth = this.halfExtents.x * 2;
+        const imageHeight = this.halfExtents.y * 2.6;
+        canvas.drawImage(theimage, imageX, imageY, imageWidth, imageHeight);
         canvas.restore();
     }
 }

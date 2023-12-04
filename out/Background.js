@@ -18,12 +18,12 @@ function walloftext(canvas, text) {
 const FAILURE_PICTURE = prerender(960 /* Settings.screenWidth */, 540 /* Settings.screenHeight */, canvas => {
     canvas.fillStyle = FAILURE_BACK;
     canvas.fillRect(0, 0, 960 /* Settings.screenWidth */, 540 /* Settings.screenHeight */);
-    walloftext(canvas, '404 Not Found');
+    walloftext(canvas, 'PAPA GODNOŚĆ');
 });
 const FAILURE_MOVED_PICTURE = prerender(960 /* Settings.screenWidth */, 540 /* Settings.screenHeight */, canvas => {
     canvas.fillStyle = FAILURE_BACK;
     canvas.fillRect(0, 0, 960 /* Settings.screenWidth */, 540 /* Settings.screenHeight */);
-    walloftext(canvas, '301 Moved');
+    walloftext(canvas, 'PAPA PERSPEKTYWY');
 });
 const WALL_PICTURE = prerender(960 /* Settings.screenWidth */, 540 /* Settings.screenHeight */, canvas => {
     canvas.beginPath();
@@ -41,18 +41,18 @@ function paintBackground(canvas, t, level) {
         canvas.textAlign = 'center';
         canvas.textBaseline = 'top';
         canvas.fillStyle = '#f1f1f1';
-        canvas.fillText('1. Pull', level.startingPoint.x, level.startingPoint.y + 48);
-        canvas.fillText('2. Release', level.startingPoint.x - 256 /* Settings.targetReleaseDist */, level.startingPoint.y + 48);
+        canvas.fillText('1. Ciągnij', level.startingPoint.x, level.startingPoint.y + 48);
+        canvas.fillText('2. Puść', level.startingPoint.x - 256 /* Settings.targetReleaseDist */, level.startingPoint.y + 48);
     }
     else if (level.constructor === End) {
         canvas.font = systemFont;
         canvas.textAlign = 'center';
         canvas.textBaseline = 'middle';
         canvas.fillStyle = '#f1f1f1';
-        canvas.fillText('Written by Mark Vasilkov for js13kGames in 2020', 960 /* Settings.screenWidth */ * 0.5, 540 /* Settings.screenHeight */ - 24);
+        canvas.fillText('Golec, stolec, pierdolec, kondomomolec, wigilia 2023', 960 /* Settings.screenWidth */ * 0.5, 540 /* Settings.screenHeight */ - 24);
         canvas.font = systemFontHeading;
         canvas.fillStyle = EARTH_BACK;
-        canvas.fillText('Thank you for playing!', 960 /* Settings.screenWidth */ * 0.5, 540 /* Settings.screenHeight */ * 0.25);
+        canvas.fillText('Udało się zdobyć godność dla Golec!', 960 /* Settings.screenWidth */ * 0.5, 540 /* Settings.screenHeight */ * 0.25);
     }
 }
 function paintCurtain(canvas, t, level) {

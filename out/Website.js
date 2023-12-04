@@ -56,6 +56,17 @@ class Website {
     paint(canvas, _t) {
         canvas.fillStyle = '#f1f1f1';
         canvas.fillRect(this.x, this.y, this.width, this.height);
-        canvas.drawImage(WEBSITE_PICTURE, this.x + (110 /* Settings.websiteWidth */ - 88 /* Settings.websitePicWidth */) * 0.5, this.y + (196 /* Settings.websiteHeight */ - 64 /* Settings.websitePicHeight */) * 0.5, 88 /* Settings.websitePicWidth */, 64 /* Settings.websitePicHeight */);
+        // canvas.drawImage(WEBSITE_PICTURE,
+        //     this.x + (Settings.websiteWidth - Settings.websitePicWidth) * 0.5,
+        //     this.y + (Settings.websiteHeight - Settings.websitePicHeight) * 0.5,
+        //     Settings.websitePicWidth, Settings.websitePicHeight)
+        const text = 'ROZUM';
+        const text2 = 'GODNOŚĆ';
+        const textX = this.x + 50; // Adjust the X position as needed
+        const textY = this.y + 50; // Adjust the Y position as needed
+        canvas.fillStyle = 'black'; // Set the text color
+        canvas.font = '16px Arial'; // Set the font style
+        canvas.fillText(text, textX, textY);
+        canvas.fillText(text2, textX, textY + 30);
     }
 }

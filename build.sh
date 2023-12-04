@@ -13,7 +13,7 @@ npx terser --enclose --compress --mangle -o build/app.js \
     out/natlib/NVec2.js out/natlib/Utils.js out/natlib/Prelude.js out/natlib/NVertex.js \
     out/natlib/NStaticVertex.js out/natlib/NConstraint.js out/natlib/NBody.js out/natlib/SAT.js \
     out/natlib/NBall.js out/natlib/NScene.js out/natlib/Canvas.js out/natlib/Pointer.js \
-    out/natlib/Mainloop.js out/Reticle.js out/FiringPin.js out/UserAgent.js out/Firefox.js \
+    out/natlib/Mainloop.js out/Moon.js out/Reticle.js out/FiringPin.js out/UserAgent.js out/Firefox.js  \
     out/InternetExplorer.js out/BigBrother.js out/Wall.js out/Box.js out/WebsiteBox.js out/Website.js \
     out/MovingWebsite.js out/NoWebsite.js out/Level.js out/levels/Level_02_TheWall.js \
     out/levels/Level_03_Opening.js out/levels/Level_04_Breach.js out/levels/Level_05_Banned.js \
