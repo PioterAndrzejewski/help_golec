@@ -12,7 +12,10 @@
             }
       
             document.getElementById("text").addEventListener("click",
-            handleButtonClick);document.getElementById("button").addEventListener("click",
+            handleButtonClick);
+            document.getElementById("text").addEventListener("touchend",
+            handleButtonClick);
+            document.getElementById("text").addEventListener("touchmove",
             handleButtonClick);
           
             setTimeout(handleButtonClick, 3000)
