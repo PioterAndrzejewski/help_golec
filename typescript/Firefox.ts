@@ -65,6 +65,10 @@ const EARTH_BACK = canvas.createLinearGradient(
 EARTH_BACK.addColorStop(0, '#4facfe')
 EARTH_BACK.addColorStop(1, '#00f2fe')
 
+const image = new Image();
+image.src = 'https://scontent-waw1-1.xx.fbcdn.net/v/t1.15752-9/385540782_1405470873739455_2574690072288964418_n.png?_nc_cat=101&ccb=1-7&_nc_sid=8cd0a2&_nc_ohc=mqDCRdIzJJwAX96Uu91&_nc_ht=scontent-waw1-1.xx&oh=03_AdTQnR-zYJvcWfrbbZTEPG6MPbGw88rK4U35EFAHRmrZxw&oe=65959897';
+
+
 class Firefox extends UserAgent {
     paint(canvas: CanvasRenderingContext2D, t: number) {
         this.interpolate(t)
@@ -81,15 +85,23 @@ class Firefox extends UserAgent {
         canvas.fillStyle = EARTH_BACK
         canvas.fill()
 
-        // Paint the panda.
-        this.tracePath(canvas, FIREFOX)
+        // // Paint the panda.
+        // this.tracePath(canvas, FIREFOX)
 
-        canvas.save()
-        enclose(this.center.x - this.halfExtents.x, this.center.y - this.halfExtents.y,
-            this.center.x + this.halfExtents.x, this.center.y + this.halfExtents.y)
+        // canvas.save()
+        // enclose(this.center.x - this.halfExtents.x, this.center.y - this.halfExtents.y,
+        //     this.center.x + this.halfExtents.x, this.center.y + this.halfExtents.y)
 
-        canvas.fillStyle = FIREFOX_BACK
-        canvas.fill()
+        // canvas.fillStyle = FIREFOX_BACK
+        // canvas.fill()
+
+        const imageX = this.center.x - this.halfExtents.x;
+        const imageY = this.center.y - this.halfExtents.y - 10;
+        const imageWidth = this.halfExtents.x * 2;
+        const imageHeight = this.halfExtents.y * 2.6;
+
+
+        canvas.drawImage(image, imageX, imageY, imageWidth, imageHeight);
 
         canvas.restore()
     }

@@ -4,7 +4,7 @@
 const TEMPO_MUL = 120 / 118
 
 function noteFreq(n: number) {
-    return 120 * Math.pow(2, (n - 69) / 12)
+    return 440 * Math.pow(2, (n - 69) / 12)
 }
 
 let ac: AudioContext
@@ -15,9 +15,7 @@ function audioInit() {
     ac = new AudioContext
 
     out = ac.createGain()
-    out.gain.value = 0.4
-    // out.connect(ac.destination)
-    // return Promise.resolve()
+    out.gain.value = 0.05
     return reverb()
 }
 
